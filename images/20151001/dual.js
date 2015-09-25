@@ -43,11 +43,11 @@ $(function(){
             _timeBox.addClass("dual-october-time-2");
             $("#dual-text-time").html(textTime);
             setTimeout(function(){
-                timeData = timeData-1000;
+                timeData = timeData+1000;
                 count_down(duaEndTime,timeData);
             },1000);
         }else{
-            var _day = (Math.floor(timeDay)).toString(),
+            var _day = (Math.floor(timeDay)+1).toString(),
                 datImgSrc  = '<img src="http://sf.panli.com/Ued/images/20151001/day.png" >';
               _timeBox.addClass("dual-october-time-1");
               $("#dual-text-time").html(_day+datImgSrc);

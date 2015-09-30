@@ -1,0 +1,394 @@
+@charset "UTF-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  -webkit-appearance: none;
+  resize: none; }
+
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article,
+aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  -webkit-tap-highlight-color: transparent; }
+
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* 图片自适应 */
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/ }
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article,
+aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+body {
+  font-family: Microsoft YaHei,Tahoma,Arial,sans-serif;
+  color: #555; }
+
+em, i {
+  font-style: normal; }
+
+strong {
+  font-weight: normal; }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: Microsoft YaHei,Tahoma,Arial,sans-serif; }
+
+a:hover {
+  color: #FED503;
+  text-decoration: none; }
+
+ul, ol {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-family: Microsoft YaHei; }
+
+img {
+  border: none; }
+
+.scope {
+  min-width: 320px;
+  max-width: 540px; }
+
+/* 通用基样式 */
+.t-css {
+  width: 100%;
+  overflow: hidden;
+  display: table; }
+
+.t-img-css {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+
+.t-row-css {
+  display: table-row;
+  width: 100%; }
+
+.t-cell-css {
+  display: table-cell;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+  box-sizing: border-box; }
+
+.rm-a-css {
+  -webkit-tap-highlight-color: transparent; }
+
+.set-img-css {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+
+.base-box-css {
+  width: 100%;
+  overflow: hidden; }
+
+/* 三档大小 */
+body {
+  background-color: #15cbbf; }
+
+.app {
+  padding-bottom: 1.6rem;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto; }
+
+.mg-lf-rem-05 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
+
+.mg-lf-rem-1 {
+  margin-left: 1rem;
+  margin-right: 1rem; }
+
+.pd-lr-rem-1 {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
+.pd-lr-rem-05 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+
+.red {
+  color: #fd4530; }
+
+.progress-bar {
+  position: fixed;
+  bottom: 0.6rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 999;
+  overflow: hidden;
+  border: 0.1rem solid #FFF;
+  border-radius: 1rem;
+  background-color: #8bc1b0; }
+  .progress-bar #load-count {
+    height: .5rem;
+    background-color: #15cabe;
+    width: 0%;
+    text-align: center;
+    transition: width 1s;
+    -moz-transition: width 1s;
+    -webkit-transition: width 1s;
+    -o-transition: width 1s; }
+  .progress-bar #load-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    height: .5rem;
+    line-height: .5rem; }
+
+.star-bg-box {
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+.star-box {
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: star 6s linear infinite;
+          animation: star 6s linear infinite; }
+
+@-webkit-keyframes star {
+  0% {
+    -webkit-transform: rotateX(360deg) scale(1);
+            transform: rotateX(360deg) scale(1); }
+  50% {
+    -webkit-transform: rotateX(320deg) rotateY(20deg) scale(0.9);
+            transform: rotateX(320deg) rotateY(20deg) scale(0.9); }
+  100% {
+    -webkit-transform: rotateX(360deg) scale(1);
+            transform: rotateX(360deg) scale(1); } }
+
+@keyframes star {
+  0% {
+    -webkit-transform: rotateX(360deg) scale(1);
+            transform: rotateX(360deg) scale(1); }
+  50% {
+    -webkit-transform: rotateX(320deg) rotateY(20deg) scale(0.9);
+            transform: rotateX(320deg) rotateY(20deg) scale(0.9); }
+  100% {
+    -webkit-transform: rotateX(360deg) scale(1);
+            transform: rotateX(360deg) scale(1); } }
+
+.header {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  min-height: 9rem; }
+  .header .star-box, .header .phone6 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0; }
+  .header .star-box {
+    z-index: 8; }
+  .header .phone6 {
+    z-index: 9; }
+    .header .phone6 img {
+      margin-top: 1rem; }
+
+.main {
+  background-color: #ffd837;
+  min-height: 5rem;
+  margin-top: -1.6rem;
+  position: relative;
+  z-index: 1;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem; }
+
+.margin-h-bg {
+  top: -1rem;
+  background: url(../images/yellow-bg-h.png) no-repeat; }
+
+.margin-b-bg {
+  bottom: -1rem;
+  background: url(../images/yellow-bg-b.png) no-repeat; }
+
+.margin-h-bg, .margin-b-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1rem;
+  background-size: 100%; }
+
+.top-info {
+  min-height: 2rem;
+  padding-bottom: .5rem;
+  position: relative; }
+  .top-info .top-info-text {
+    margin-right: 3rem;
+    font-size: 16px;
+    color: #554106; }
+  .top-info .top-info-phone {
+    position: absolute;
+    background: url(../images/hello-iphone.png) no-repeat;
+    background-size: contain;
+    width: 2.6rem;
+    height: 3rem;
+    right: 0;
+    bottom: -0.5rem; }
+
+.hello-info {
+  background: #FFF;
+  position: relative;
+  padding: 0.1rem; }
+
+.hello-info-boder {
+  position: relative;
+  border: 0.07rem solid #ffecd3;
+  min-height: 2.6rem;
+  background-size: 1.4rem 1.4rem;
+  padding: 0.3rem; }
+  .hello-info-boder p {
+    font-size: 16px; }
+  .hello-info-boder .p2 {
+    text-indent: 0.8rem; }
+  .hello-info-boder .hellp-price {
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url(../images/price.png) no-repeat;
+    background-size: contain; }
+
+.list-top {
+  background: #fd4530;
+  padding-bottom: 0.3rem;
+  margin-top: 0.7rem; }
+  .list-top .list-top-title {
+    height: 1.2rem;
+    background: url(../images/top-title.png) no-repeat center center;
+    background-size: 80%; }
+
+.list-top-body {
+  position: relative;
+  margin: 0 0.06rem;
+  min-height: 1rem;
+  background-color: #fff7ec;
+  padding: 0.3rem;
+  padding-bottom: 0; }
+
+.list-h-bg {
+  top: -0.1rem;
+  height: .2rem; }
+
+.list-b-bg {
+  bottom: -0.2rem;
+  height: .3rem; }
+
+.list-h-bg, .list-b-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: url(../images/waves.png) no-repeat;
+  background-size: 100%; }
+
+.list-top-ul {
+  position: relative; }
+  .list-top-ul li {
+    width: 100%;
+    display: block; }
+    .list-top-ul li > div {
+      float: left;
+      width: 50%;
+      text-align: center;
+      display: inline-block; }
+    .list-top-ul li .td1 {
+      text-align: left;
+      text-indent: 1rem; }
+    .list-top-ul li.liT {
+      background: #ffe2ba;
+      color: #1c1c1c;
+      font-weight: bold;
+      border-radius: 0.2rem;
+      padding: 0.08rem 0;
+      margin-bottom: 0.2rem; }
+    .list-top-ul li.li1 {
+      padding-top: 0.1rem;
+      color: #fd4530;
+      font-size: 16px;
+      background: url(../images/small-phone.png) no-repeat 0.2rem;
+      background-size: 0.36rem 0.56rem; }
+    .list-top-ul li.li2 {
+      padding: 0.08rem 0;
+      border-top: 1px dotted #cccccc; }
+
+.list-info {
+  margin: 0.4rem 0; }
+  .list-info p {
+    position: relative;
+    padding-left: 0.4rem; }
+    .list-info p span {
+      position: absolute;
+      left: 0.08rem;
+      font-size: 16px; }
+
+.activity-rules {
+  padding-bottom: 0.5rem; }
+
+.rules-list {
+  padding-left: 0.4rem; }
+
+.rules-title {
+  height: 0.8rem;
+  background: url(../images/rule-title.png) no-repeat;
+  background-size: contain;
+  margin-bottom: 0.2rem; }
+
+.rules-list-ol {
+  list-style: decimal; }

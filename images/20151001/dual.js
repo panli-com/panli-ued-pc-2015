@@ -1,6 +1,6 @@
 $(function(){
 
-  var duaEndTime = '2015-10-15 23:59:59';
+  var duaEndTime = '2015-10-16 7:59:59';
   function count_down(endTime,timeData){
 
         function p(s) {

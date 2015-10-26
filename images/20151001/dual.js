@@ -1,6 +1,6 @@
 $(function(){
 
-  var duaEndTime = '2015-10-16 7:59:59';
+  var duaEndTime = '2015-10-24 7:59:59';
   function count_down(endTime,timeData){
 
         function p(s) {
@@ -73,15 +73,16 @@ $(function(){
 
 
 function getTimeInfo(callback){
-     $.ajax({
-       type: "POST",
-       url: "/App_Services/wsDefault.asmx/GetDateTime",
-       dataType: "json",
-       contentType: "application/json;utf-8",
-       timeout: 10000,
+    $.ajax({
+        type: "POST",
+        url: "/App_Services/wsDefault.asmx/GetDateTime",
+        dataType: "json",
+        contentType: "application/json;utf-8",
+        timeout: 10000,
         error: function () { },
         success: function (data) {
-              callback(parseInt(data.d));
+            callback(parseInt(data.d));
+            console.log(data.d);
         }
     });
   };

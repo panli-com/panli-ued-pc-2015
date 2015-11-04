@@ -1,6 +1,6 @@
 $(function () {
 
-    var duaEndTime = '2015-11-12 7:59:59';
+    var duaEndTime = '2015-11-11 23:59:59';
     function count_down(endTime, timeData) {
 
         function p(s) {
@@ -48,7 +48,7 @@ $(function () {
             }, 1000);
         } else {
             var _day = (Math.floor(timeDay) + 1).toString(),
-                datImgSrc = '<img src="http://sf.panli.com/Ued/images/20151001/day.png" >';
+                datImgSrc = '<img src="http://sf.panli.com/Ued/Pc/header/20151001/day.png" >';
             _timeBox.addClass("dual-october-time-1");
             $("#dual-text-time").html(_day + datImgSrc);
         }
@@ -64,7 +64,7 @@ $(function () {
             console.log("不在时间范围");
             return;
         }
-        getTimeInfo(function (timeData) {
+        getTimeInfo(function (timeData) {            
             count_down(duaEndTime, timeData);
         })
     };
@@ -75,14 +75,14 @@ $(function () {
 function getTimeInfo(callback){
     $.ajax({
         type: "POST",
-        url: "/App_Services/wsDefault.asmx/GetDateTime",
+        url: "/App_Services/wsDefault.asmx/GetDateTimeStamp",
         dataType: "json",
         contentType: "application/json;utf-8",
         timeout: 10000,
         error: function () { },
         success: function (data) {
-            callback(parseInt(data.d));
-            console.log(data.d);
+            callback(parseInt(data.d * 1000));
+           
         }
     });
   };

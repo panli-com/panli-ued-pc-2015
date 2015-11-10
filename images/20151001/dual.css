@@ -1,0 +1,48 @@
+.dual-october-wrap{
+    
+    margin-bottom:-8px;
+
+}
+.dual-october-wrap a{
+  display:block;
+  padding: 0;
+  font-size: 0;
+  position: relative;
+  text-decoration: none;
+}
+.dual-october-wrap a img{
+  padding: 0;
+  margin: 0
+}
+.dual-october-time-1,.dual-october-time-2{
+  position: absolute;
+  width: 200px;
+  height: 70px;
+  top: 0;
+  left: 294px;
+  font-size: 14px;
+}
+
+.dual-october-time-1{
+  background: url(./logo_time1_20151111.png) no-repeat;
+}
+.dual-october-time-2{
+  background: url(./logo_time2_20151111.png) no-repeat;
+}
+.dual-text-time{
+  font-size: 18px;
+  position: absolute;
+  left: 7px;
+  bottom: 4px;
+  color: #fd6f6e;
+  text-align: center;
+}
+.dual-october-time-1 .dual-text-time{
+  width: 40px;
+}
+.dual-october-time-2 .dual-text-time{
+  width: 74px;
+  left: 0;
+  font-size: 16px;
+  line-height: 26px;
+}

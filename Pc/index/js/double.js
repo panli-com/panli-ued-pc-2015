@@ -2,8 +2,7 @@
   $(function(){    
     // 获取服务器时间回调
     getServerTimeStamp(function(e){        
-        FStardouble(e,'2015/11/11 00:00:00','2015/11/11 23:59:59');
-       
+        FStardouble(e,'2015/11/11 00:00:00','2015/11/11 23:59:59');       
     })   
 
   });
@@ -24,10 +23,13 @@
         if(dobCookie == 2){
             return;
         }
-        if(NowH >= 23){
-            FndoubleElevenLayer(NowTime,EndTime,2); 
+        if(dobCookie == 1 && NowH < 23){
             return;
         }
+        if(NowH >= 22){
+            FndoubleElevenLayer(NowTime,EndTime,2); 
+            return;
+        }            
         if(dobCookie == null){
             FndoubleElevenLayer(NowTime,EndTime,1);       
         }    

@@ -15,7 +15,8 @@
   padding: 0;
   margin: 0
 }
-.dual-october-time-1,.dual-october-time-2{
+
+.dual-october-time,.dual-october-time-1,.dual-october-time-2{
   position: absolute;
   width: 200px;
   height: 48px;

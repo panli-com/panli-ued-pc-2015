@@ -2,7 +2,7 @@
   $(function(){    
     // 获取服务器时间回调
     getServerTimeStamp(function(e){        
-        FStardouble(e,'2015/11/11 00:00:00','2015/11/11 23:59:59');       
+        FStardouble(e,'2015/11/11 00:00:00','2015/12/12 23:59:59');       
     })   
 
   });
